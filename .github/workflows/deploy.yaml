@@ -1,4 +1,8 @@
 name: Deploy Site
+on:
+  push:
+    branches:
+      - "*"
 jobs:
   Upload to CloudFlare Pages:
     runs-on: ubuntu-22.04
