@@ -1,0 +1,17 @@
+name: Deploy Site
+on:
+  push:
+    branches:
+      - "*"
+jobs:
+  upload-to-cloudflare-pages:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Publish site content
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: pages publish --project-name brintonium-site site/

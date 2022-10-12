@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Brintonium.com</title>
+    <meta name="description" content="Brintonium.com home page">
+    <meta name="author" content="Connor Brinton">
+
+    <!-- Styles to make sure the PDF takes up the entire viewport -->
+    <style>
+      /* Style for the embedded PDF and all ancestor elements */
+      html, body, article, embed {
+        /* Use the entire viewport */
+        height: 100%;
+        width: 100%;
+
+        /* Disable default margins to avoid extra whitespace */
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <embed src="assets/Resume.pdf" type="application/pdf" />
+    </article>
+  </body>
+</html>
